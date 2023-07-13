@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-accessible" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+  <path d="M10 16.5l2 -3l2 3m-2 -3v-2l3 -1m-6 0l3 1" />
+  <circle cx="12" cy="7.5" r=".5" fill="currentColor" />
+</svg>
+  <h1>Clients</h1>
+
+  <%= link_to "New client", new_client_path %>
+
+  <div id="clients">
+    <table class="table table-bordered">
+      <thead>
+        <tr class = "table-success">
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Movie</th>
+          <th scope="col" colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @clients.each do |client| %>
+          <%= render client %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
